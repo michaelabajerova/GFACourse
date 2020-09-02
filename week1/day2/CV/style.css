@@ -1,0 +1,113 @@
+body {
+    background-image: url(./bac.png);
+    background-repeat: repeat;
+    background-size: 1550px;
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    }
+
+
+
+
+img {
+    height: 200px;
+}
+.logo {
+    height: 100px;
+}
+
+.logo2 {
+height: 180px;
+width: 180px;
+}
+.book {
+    width: 120px;
+    height: 120px;
+    padding-top: 30px;
+}
+]
+h1 {
+    color: white;
+    text-align: :left;
+}
+
+.head {}
+ 
+}
+
+
+li {
+    color: white;
+}
+h2 {
+    color: white;
+    text-align: left;  
+    font-size: 30px;
+}
+
+.two {
+    text-align-last: left;
+
+}
+
+h3 {
+    color: white;
+    font-size: 30px;
+
+}
+.three {
+ padding-left: 30px;
+}
+h4 {
+    color: white;
+    text-align: right;
+    font-size: 30px;
+  
+}
+.four {
+    text-align: left;
+    
+    color: white;
+}
+header {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+}
+.education {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+}
+.career {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;  
+}
+.hobbies {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    margin-top: -10px;
+}
+.bigcontent {
+    display: flex;
+    padding-top: 120px;
+}
+
+.work {
+    width: 140px;
+    height: 130px;
+}
+.career {
+    padding-left: 10px;
+}
+.gam {
+    width: 130px;
+    height: 130px;
+}
