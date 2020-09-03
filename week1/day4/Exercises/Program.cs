@@ -81,10 +81,9 @@ namespace exercises
             Console.WriteLine(s < t*t*t);
 
             long u = 1357988018575474;
-            if (u % 11 == 0) ;
-            {
-                Console.WriteLine("true");
-            }
+            Console.WriteLine($"is 11 divisor of {u}?");
+            bool isDivisor = h % 11 == 0 ? true : false;
+            Console.WriteLine(isDivisor);
 
 
 
