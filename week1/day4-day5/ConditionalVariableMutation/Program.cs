@@ -10,8 +10,13 @@ namespace ConditionalVariableMutation
             // if a is even increment out by one
 
             double a = 24;
-            int num = 0;
+            int out2 = 0;
            
+            if (a % 2 == 0)
+            {
+                a++;
+            }
+            Console.WriteLine(out2);
           
 
 
@@ -20,9 +25,9 @@ namespace ConditionalVariableMutation
             // if more than 20 set out2 to "More!"
            
             int b = 13;
-            string out2 = "";
+            string out4 = "";
             
-            if ( b > 10 && b < 20)
+            if ( b >= 10 && b <= 20)
             {
                 Console.WriteLine("Sweet!");
             }
