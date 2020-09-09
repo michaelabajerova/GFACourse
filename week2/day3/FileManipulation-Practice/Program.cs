@@ -110,7 +110,25 @@ namespace FileManipulation
             {
                 Console.WriteLine("0");
             }
-            Console.ReadLine();
+            
+            // Write a function that reads all lines of a file and writes the read lines to an other file (a.k.a copies the file)
+            // It should take the filenames as parameters
+            // It should return a boolean that shows if the copy was successful
+
+            var path5 = @"C:\Users\bajer\Documents\Greenfox\michaelabajerova\week2\day3\FileManipulation-Practice\myfile.txt";
+            var path6 = @"C:\Users\bajer\Documents\Greenfox\michaelabajerova\week2\day3\FileManipulation-Practice\myfile2.txt";
+
+            var contentString = File.ReadAllText(path5);
+            File.WriteAllText(path6, contentString);
+
+            foreach (string line in File.ReadLines(@"C:\Users\bajer\Documents\Greenfox\michaelabajerova\week2\day3\FileManipulation-Practice\myfile2.txt"))
+            {
+                if (line.Contains("Hello"))
+                {
+                    Console.WriteLine("It does");
+                }
+            }
+              Console.ReadLine();
         }
     }
 }
