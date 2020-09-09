@@ -18,6 +18,7 @@ namespace PrintEachLine
                 using (var reader = new StreamReader(path))
                 {
                     var line = reader.ReadToEnd();
+                    Console.WriteLine(line);
                 }
             }
             catch (Exception)

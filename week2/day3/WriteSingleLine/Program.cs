@@ -20,8 +20,8 @@ namespace WriteSingleLine
 
             using (StreamReader reader = new StreamReader(path))
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                string line = string.Empty;
+                while (line != null)
                 {
                     Console.WriteLine(line);
                 }
