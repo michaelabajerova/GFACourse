@@ -4,8 +4,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Width="800" Height="800"
         x:Class="DrawingApplication.MainWindow"
-        Title="DrawingApplication">
-  <Grid>
-    <Canvas Name="canvas"></Canvas>
-  </Grid>
+        Title="LinePLay">
+	<Grid>
+		<Canvas Name="canvas"></Canvas>
+	</Grid>
 </Window>
