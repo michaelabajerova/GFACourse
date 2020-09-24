@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ToDo-app": {
+      "commandName": "Project",
+      "commandLineArgs": "-l -a -r -c"
+    }
+  }
+}
