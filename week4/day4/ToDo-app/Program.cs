@@ -46,41 +46,7 @@ namespace ToDo_app
             else
             {
                 Console.WriteLine("Unsupported argument");
-            }
-
-
-
-
-
-                        /*Console.Beep(650, 300);
-                        Console.Beep(650, 300);
-                        Console.Beep(650, 300);
-                        Console.Beep(500, 300);
-                        Console.Beep(660, 300);
-                        Console.Beep(780, 300);
-                        Con}sole.Beep(400, 300);
-                        Console.Beep(500, 300);
-                        Console.Beep(400, 300);
-                        Console.Beep(330, 300);
-                        Console.Beep(440, 300);
-                        Console.Beep(490, 300);
-                        Console.Beep(460, 300);
-                        Console.Beep(440, 300);
-                        Console.Beep(390, 300);
-                        Console.Beep(650, 300);
-                        Console.Beep(680, 300);
-                        Console.Beep(700, 300);
-                        Console.Beep(690, 300);
-                        Console.Beep(750, 250);
-                        Console.Beep(700, 250);
-                        Console.Beep(600, 250);
-                        Console.Beep(580, 250);
-                        Console.Beep(500, 250);
-                        Console.Beep(500, 250);
-                        Console.Beep(400, 250);*/
-
-                
-            
+            }  
         }
     }
 }
