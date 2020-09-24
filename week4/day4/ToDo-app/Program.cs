@@ -11,32 +11,42 @@ namespace ToDo_app
         static void Main(string[] args)
         {
             PrintUsage greet = new PrintUsage();
-            greet.PrinUsages();
+            greet.PrintUsages();
 
-            Console.ReadLine();
+            string input = Convert.ToString(Console.ReadLine());
 
             TaskList one = new TaskList();
-           
 
-            if (args.Length > 0)
+            if (input == "-l" || input == "-a" || input == "-c" || input == "-r")
             {
-                switch (args[0])
+                if (args.Length > 0)
                 {
-                    case "-l":
-                        one.ListTask();
-                        one.EmptyList();
-                        break;
-                    case "-a":
-                        for (int i = 0; i < args.Length; i++)
-                        {
-                            one.AddTask();
-                        }
-                        break;
-                    case "-r":
-                        one.RemoveTask();
-                        break;
-                    /*case "-c":*/
+                    switch (args[0])
+                    {
+                        case "-l":
+                            one.ListTask();
+                            one.EmptyList();
+                            break;
+                        case "-a":
+                            for (int i = 0; i < args.Length; i++)
+                            {
+                                one.AddTask();
+                            }
+                            break;
+                        case "-r":
+                            one.RemoveTask();
+                            break;
+                        case "-c":
+                            one.CheckTask();
+                            break;
 
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Unsupported argument");
+            }
 
 
 
@@ -48,7 +58,7 @@ namespace ToDo_app
                         Console.Beep(500, 300);
                         Console.Beep(660, 300);
                         Console.Beep(780, 300);
-                        Console.Beep(400, 300);
+                        Con}sole.Beep(400, 300);
                         Console.Beep(500, 300);
                         Console.Beep(400, 300);
                         Console.Beep(330, 300);
@@ -69,8 +79,8 @@ namespace ToDo_app
                         Console.Beep(500, 250);
                         Console.Beep(400, 250);*/
 
-                }
-            }
+                
+            
         }
     }
 }

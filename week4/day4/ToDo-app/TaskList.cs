@@ -36,14 +36,14 @@ namespace ToDo_app
 
             string tempFile = Path.GetTempFileName();
 
-            using (var sr = new StreamReader("TextFile1.txt"))
+            using (var sr = new StreamReader(@"C:\Users\bajer\Documents\Greenfox\michaelabajerova\week4\day4\ToDo-app\TextFile1.txt"))
             using (var sw = new StreamWriter(tempFile))
             {
                 string line;
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                    if (line != "removeme")
+                    if (line.Contains("milk"))
                         sw.WriteLine(line);
                 }
             }
@@ -52,6 +52,30 @@ namespace ToDo_app
             File.Move(tempFile, "TextFile1.txt");
         }
         public void CheckTask()
+        {
+            string path = @"C:\Users\bajer\Documents\Greenfox\michaelabajerova\week4\day4\ToDo-app\TextFile1.txt";
+            int lineNumber = 2;
+            try
+            {
+                using (StreamReader inputFile = new StreamReader(path))
+                {
+                    for (int i = 1; i < lineNumber; i++)
+                    {
+                        inputFile.ReadLine();
+                    }
+
+                    Console.WriteLine(inputFile.ReadLine());
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("There was an error reading the file: ");
+                Console.WriteLine(e.Message);
+            }
+
+            Console.ReadLine();
+        }
+        public void ErrorHandling()
         {
 
         }

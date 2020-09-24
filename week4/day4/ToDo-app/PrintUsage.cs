@@ -8,7 +8,7 @@ namespace ToDo_app
     class PrintUsage
     {
 
-        public void PrinUsages()
+        public void PrintUsages()
         {
             Console.WriteLine("$ todo \n\n Command Line Todo application\n" +
                             "=============================\n" +
