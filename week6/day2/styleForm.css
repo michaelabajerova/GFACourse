@@ -1,0 +1,54 @@
+﻿body
+{
+    background-color: lightblue;
+    display: inline-block;
+    font-family: Calibri;
+    color: lightslategrey;
+    padding-left: 520px;
+    padding-top: 100px;
+}
+
+header{
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: -60px;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    padding: 100px 50px 150px;
+}
+.input-field, form .button{
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin: 10px 0;
+}
+.input-field input{
+    height: 120%;
+    width: 100%;
+    border: 1px solid silver;
+    padding-left: 10px;
+}
+
+.forgot {
+    padding: 0;
+    border: none;
+    background: none;
+    position: center;
+}
+.forgot:hover {
+    opacity: 0.8;
+    color: indianred;
+}
+.login {
+    background-color: black;
+    color: white;
+    padding: 15px 5px;
+    margin: 40px 0;
+    border: none;
+    width: 35%;
+    border-radius: 20px;
+}
