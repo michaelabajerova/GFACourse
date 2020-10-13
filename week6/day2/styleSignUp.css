@@ -1,38 +1,40 @@
 ﻿body {
+    background-image: url("img.jpg");
+    background-size: 1250px;
     margin: 0;
     padding: 0;
-    background-color: darkviolet;
-    font-size: 30px;
-    color: darkblue;
+    font-size: 10px;
+    color: white;
     font-family: sans-serif;
-    font-weight: 300;
+    font-weight: 100;
 }
 
 #login-box {
     position: relative;
     margin: 5% auto;
-    height: 500px;
-    width: 800px;
-    background-color: white;
+    height: 300px;
+    width: 600px;
+    background-color: darkorange;
 }
 
 .left-box {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 70px;
-    width: 300px;
-    height: 400px;
+    padding: 20px;
+    width: 100px;
+    height: 200px;
 }
 
 input[type=text], 
 input[type="password"]:focus {
-    border-bottom: 3px solid violet;
+    border-bottom: 3px solid brown;
+    background-color: darkorange;
 }
 h1 {
     margin: 0 0 20px 0;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 22px;
 }
 
 input[type="text"],
@@ -42,31 +44,31 @@ input[type="password"] {
     margin-bottom: 20px;
     padding: 4px;
     width: 220px;
-    height: 32px;
+    height: 25px;
     border: none;
     outline: none;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 2px solid darkblue;
     font-family: sans-serif;
     font-size: 15px;
-    transition: 0.2s ease;
+    background-color: darkorange;
 }
 
 input[type="submit"] {
     width: 120px;
-    height: 32px;
-    background-color: blueviolet;
+    height: 25px;
+    background-color: darkblue;
     border: none;
     border-radius: 2px;
     color: white;
     font-family: sans-serif;
     font-weight: 400;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 input[type="submit"]:hover,
 input[type="submit"]::after {
-    background-color: darkslateblue;
-    transition: 0.8s ease;
-    transform: scale(1.5);
+    background-color: blueviolet;
+    transition: 0.5s ease;
+    transform: scale(1.1);
 }
 
 .right-box {
@@ -74,22 +76,21 @@ input[type="submit"]::after {
     top: 0;
     right: 0;
     box-sizing: border-box;
-    padding: 150px 20px;
-    width: 300px;
-    height: 400px;
-    background-image: url(image1.jpg);
+    padding: 80px 20px;
+    width: 200px;
+    height: 200px;
     background-size: cover;
     background-position: center;
 }
 
 .or {
-    font-size: 20px;
+    font-size: 12px;
     position: absolute;
-    top: 200px;
-    left: 360px;
+    top: 150px;
+    left: 300px;
     width: 50px;
     height: 50px;
-    background: #efefef;
+    background-color: darkblue;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     line-height: 50px;
@@ -98,8 +99,8 @@ input[type="submit"]::after {
 
 button.social {
     margin-bottom: 20px;
-    width: 220px;
-    height: 50px;
+    width: 160px;
+    height: 40px;
     border: none;
     border-radius: 2px;
     color: #fff;
@@ -111,16 +112,16 @@ button.social {
     background: #32508e;
 }
 .facebook:hover {
-    transform: scale(1.2);
-    transition: 0.8s ease;
+    transform: scale(1.1);
+    transition: 0.5s ease;
 } 
 
 .twitter {
     background: #55acee;
 }
 .twitter:hover {
-    transform: scale(1.2);
-    transition: 0.8s ease;
+    transform: scale(1.1);
+    transition: 0.5s ease;
 
 }
 
@@ -128,7 +129,7 @@ button.social {
     background: #dd4b39;
 }
 .google:hover {
-    transform: scale(1.2);
-    transition: 0.8s ease;
+    transform: scale(1.1);
+    transition: 0.5s ease;
 
 }
