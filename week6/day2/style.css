@@ -1,0 +1,26 @@
+﻿body {
+    font-size: 30px;
+    font-family:Bahnschrift;
+    padding: 30px;
+    color: darkslategrey;
+    background-color: dodgerblue;
+    margin-left: 350px;
+}
+td, th {
+    border: 2px solid grey;
+    padding: 15px 200px 15px 30px;
+}
+table {
+    border-collapse: collapse;
+    
+}
+th {
+    background-color: black;
+    color: lightgray;
+}
+tbody tr:nth-child(even) {
+    background-color: lightgray;
+}
+tbody tr:nth-child(odd) {
+    background-color: darkgrey;
+}

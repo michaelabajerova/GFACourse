@@ -138,7 +138,10 @@ namespace LinqExercises
                 Console.WriteLine(gAndP.Name);
             }
             //Exercise 11//
-            var output = File.ReadAllText(@"C:\Users\bajer\Documents\Greenfox\michaelabajerova\week6\day 1\LinqExercises\TiananmenSquareProtests.txt").ToLower().Split(' ').GroupBy(w => w).OrderByDescending(w => w.Count()).Take(100);
+            var output = File.ReadAllText(@"C:\Users\bajer\Documents\Greenfox\michaelabajerova\week6\day 1\LinqExercises\TiananmenSquareProtests.txt")
+                .ToLower().Split(' ').GroupBy(w => w)
+                .OrderByDescending(w => w.Count())
+                .Take(100);
             foreach (var content in output)
             {
                 Console.WriteLine(content.Key + ":" + content.Count());
