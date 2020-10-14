@@ -9,13 +9,12 @@
     font-weight: 100;
 }
 
-#login-box {
-    
+#login-box {   
     position: relative;
-    margin: 12% 55%;
-    height: 300px;
+    margin: 10% 55%;
+    height: 350px;
     width: 600px;
-    background-color: rgb(255,140,0,0.6);
+    background-color: rgb(255,140,0,0.5);
     border-radius: 15px;
 }
 
@@ -24,20 +23,19 @@
     top: 0;
     left: 0;
     padding: 20px;
-    width: 100px;
+    width: 200px;
     height: 200px;
 }
 
 input[type=text],
 input[type="password"]:focus {
-    border-bottom: 3px solid darkorange;
-    background-color: rgb(255,140,0,0.3);
+    background-color: rgb(255,140,0,0.5);
     ;
 }
 
 h1 {
     margin: 0 0 20px 0;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 22px;
 }
 input[type="text"],
@@ -46,38 +44,43 @@ input[type="password"] {
     box-sizing: border-box;
     margin-bottom: 20px;
     padding: 4px;
-    width: 220px;
-    height: 25px;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid darkblue;
+    width: 200px;
+    height: 35px;
+    border: ridge;
+    border-color: darkred;
     font-family: sans-serif;
     font-size: 15px;
-    background-color: rgb(255,140,0,0.3);
+    background-color: rgb(255,140,0,0.5);
+}
+::placeholder {
+    color: rgb(139,69,19,0.9);
+    font-size: 12px;
+    padding: 10px;
 }
 input[type="submit"] {
-    width: 120px;
-    height: 25px;
-    background-color: darkblue;
+    width: 125px;
+    height: 35px;
+    background-color: saddlebrown;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     color: white;
-    font-family: sans-serif;
+    font-family: 'Javanese Text';
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 0;
+    font-size: 16px;
 }
-    input[type="submit"]:hover,
-    input[type="submit"]::after {
-        background-color: rgb(255,140,0,0.3);
-        transition: 0.5s ease;
-        transform: scale(1.1);
-    }
+input[type="submit"]:hover,
+input[type="submit"]::after {
+     background-color: rgb(255,140,0,0.3);
+     transition: 0.5s ease;
+     transform: scale(1.1);
+}
 .right-box {
     position: absolute;
     top: 0;
     right: 0;
     box-sizing: border-box;
-    padding: 80px 20px;
+    padding: 90px 5px;
     width: 200px;
     height: 200px;
     background-size: cover;
@@ -87,24 +90,25 @@ input[type="submit"] {
     font-size: 12px;
     position: absolute;
     top: 150px;
-    left: 300px;
+    left: 290px;
     width: 50px;
     height: 50px;
-    background-color: darkblue;
+    background-color: saddlebrown;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     line-height: 50px;
     text-align: center;
 }
 button.social {
-    margin-bottom: 20px;
-    width: 160px;
-    height: 40px;
+    margin-bottom: 25px;
+    width: 170px;
+    height: 45px;
     border: none;
     border-radius: 2px;
     color: #fff;
     font-family: sans-serif;
     font-weight: 700;
+    font-size: 15px;
 }
 .facebook {
     background: #32508e;
