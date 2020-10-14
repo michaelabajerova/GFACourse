@@ -1,0 +1,10 @@
+﻿body {
+    background-image: url(palm.gif);
+    background-size: cover;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    padding-top: 340px;
+    text-shadow: 2px 2px white;
+    font-family: Papyrus;
+}

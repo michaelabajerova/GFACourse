@@ -1,0 +1,18 @@
+﻿
+@model Workshop.Models.Greeting
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <link rel="stylesheet" href="~/Styles/style.css" type="text/css">
+</head>
+<body>
+    <p style="@Model.GetRandomColor() @Model.GetRandomFontSize()">
+        @Model.GetRandomHello(), @Model.Content! This site was loaded @Model.ID times since last server start.<br>
+        Namaste.<br>
+        Peace be with you.
+    </p>
+
+</body>
+</html>
+
