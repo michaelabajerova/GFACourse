@@ -5,16 +5,21 @@ body {
     color: white;
 }
 .header {
+    background-image: url("pump.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
+    background-position: center;
+    word-spacing: 75px;
     font-size: 65px;
     text-align: center;
     font-family: Harrington;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     border-bottom-style: groove;
 }
 ul {
     list-style-type: none;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 li {
     display: inline-block;
@@ -22,7 +27,7 @@ li {
     padding: 10px;
 }
 .button {
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     text-decoration: none;
     font-display: initial;
@@ -115,9 +120,9 @@ th {
     border: 5px groove orange;
     background-color: white;
     color: darkgoldenrod;
-    font-size: 25px;
+    font-size: 20px;
     right: 50px;
-    position: page;   
+    position: page;  
 }
 table {
     border-collapse: collapse;
@@ -132,7 +137,7 @@ td {
     border: 4px solid darkgoldenrod;
     padding: 15px 10px 15px 30px;
     background-color: black;
-    font-size: 22px;
+    font-size: 20px;
 }
 .right{
     text-align: center;
@@ -158,7 +163,7 @@ form.example button {
     cursor: pointer;
     position: absolute;
     right: 4%;
-    top: 18%;
+    top: 20%;
 }
 form.example input[type=text] {
     padding: 10px;
@@ -170,7 +175,7 @@ form.example input[type=text] {
     background: #f1f1f1;
     position: absolute;
     right: 4%;
-    top: 18%;
+    top: 20%;
 }
 form.example button:hover {
     background-color: darkgoldenrod;

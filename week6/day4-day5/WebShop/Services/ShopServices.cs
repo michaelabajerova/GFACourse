@@ -14,7 +14,7 @@ namespace WebShop.Models
         {
             ShopItems = new List<ShopItem>()
             {
-                new ShopItem("Magic Cards", "A package with which you always predict the card that the viewer chooses", 250, 10),
+                new ShopItem("Magic Cards", "A package with which you always predict the card that the viewer chooses. It's the cards who do the job, not you.", 250, 10),
                 new ShopItem("Fake thumb", "Most used and also most boring trick", 90, 0),
                 new ShopItem("Change Bag", "Let any item disappear. Doesn't work for humans", 190, 14),
                 new ShopItem("Venom", "You can flyyyyyyy", 1200, 23),

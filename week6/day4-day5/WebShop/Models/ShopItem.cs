@@ -13,13 +13,12 @@ namespace WebShop.Models.ViewModels
         public int Quantity { get; set; }
         public string Type { get; set; }
 
-        public ShopItem(string name, string description, double price, int quantity, string type)
+        public ShopItem(string name, string description, double price, int quantity)
         {
             Name = name;
             Description = description;
             Price = price;
             Quantity = quantity;
-            Type = type;
         }
     }
 }
