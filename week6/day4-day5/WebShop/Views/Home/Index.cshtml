@@ -30,6 +30,7 @@
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Type</th>
                 <th>Description</th>
                 <th>Price</th>
                 <th>Quantity of stock</th>
@@ -38,12 +39,13 @@
         <tbody>
             @foreach (var item in shopItems)
             {
-                <tr>
-                    <td>@item.Name</td>
-                    <td>@item.Description</td>
-                    <td class="right">@item.Price Kč</td>
-                    <td class="right">@item.Quantity</td>
-                </tr>
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Type</td>
+                <td>@item.Description</td>
+                <td class="right">@item.Price Kč</td>
+                <td class="right">@item.Quantity</td>
+            </tr>
             }
         </tbody>
     </table>

@@ -14,11 +14,11 @@ namespace WebShop.Models
         {
             ShopItems = new List<ShopItem>()
             {
-                new ShopItem("Magic Cards", "A package with which you always predict the card that the viewer chooses. It's the cards who do the job, not you.", 250, 10),
-                new ShopItem("Fake thumb", "Most used and also most boring trick", 90, 0),
-                new ShopItem("Change Bag", "Let any item disappear. Doesn't work for humans", 190, 14),
-                new ShopItem("Venom", "You can flyyyyyyy", 1200, 23),
-                new ShopItem("Spider Pen Pro", "You can make things flyyyyyyy", 3100, 3)
+                new ShopItem("Magic Cards","Cards", "A package with which you always predict the card that the viewer chooses. It's the cards who do the job, not you", 250, 10),
+                new ShopItem("Fake thumb","Tools", "Most used and also most boring trick", 90, 0),
+                new ShopItem("Change Bag","MicroMagic", "Let any item disappear. Doesn't work for humans", 190, 14),
+                new ShopItem("Venom","Levitation", "You can flyyyyyyy", 1200, 23),
+                new ShopItem("Spider Pen Pro","Street Magic", "You can make things flyyyyyyy", 3100, 3)
             };
         }
         public List<ShopItem> OnlyAvailable()
@@ -39,7 +39,7 @@ namespace WebShop.Models
         }
         public List<ShopItem> Search(string search)
         {
-            return ShopItems.Where(n => n.Description.ToLower().Contains(search.ToLower()) || n.Name.ToLower().Contains(search.ToLower())).ToList();
+            return ShopItems.Where(n => n.Description.ToLower().Contains(search.ToLower()) || n.Name.ToLower().Contains(search.ToLower()) || n.Type.ToLower().Contains(search.ToLower())).ToList();
         }
     }    
 }
