@@ -9,10 +9,12 @@ namespace WebShop.Models.ViewModels
     {
         public List<ShopItem> ShopItems { get; set; }
         public double Average { get; set; }
+        public string SearchItem { get; set; }
 
         public IndexViewModel(List<ShopItem> shopItems)
         {
             ShopItems = shopItems;
+            SearchItem = "Search Item";
         }
     }
 }

@@ -163,7 +163,7 @@ form.example button {
     cursor: pointer;
     position: absolute;
     right: 4%;
-    top: 20%;
+    top: 19%;
 }
 form.example input[type=text] {
     padding: 10px;
@@ -175,7 +175,7 @@ form.example input[type=text] {
     background: #f1f1f1;
     position: absolute;
     right: 4%;
-    top: 20%;
+    top: 19%;
 }
 form.example button:hover {
     background-color: darkgoldenrod;

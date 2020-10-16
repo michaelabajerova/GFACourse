@@ -37,11 +37,9 @@ namespace WebShop.Models
         {
             return ShopItems.Select(item => item.Quantity).Average();
         }
-        public List<ShopItem> Search()
+        public List<ShopItem> Search(string search)
         {
-            string search = "";
-            return ShopItems.Where(item => (item.Name.ToLower().Contains(search.ToLower())
-            || item.Description.ToLower().Contains(search.ToLower()))).ToList();
+            return ShopItems.Where(n => n.Description.ToLower().Contains(search.ToLower()) || n.Name.ToLower().Contains(search.ToLower())).ToList();
         }
     }    
 }

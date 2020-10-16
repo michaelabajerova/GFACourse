@@ -60,9 +60,9 @@ namespace WebShop.Controllers
             return View("MostExpensive", mostExpensive);
         }
         [HttpPost("search")]
-        public IActionResult Search() 
+        public IActionResult Search(string search) 
         {
-            var model = new IndexViewModel(services.Search());
+            var model = new IndexViewModel(services.Search(search));
             return View("Index", model);
         }
     }
