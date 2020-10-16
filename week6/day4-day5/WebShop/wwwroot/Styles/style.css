@@ -1,0 +1,191 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+body {
+    background-color: black;
+    background-image: url("stars.jpg");
+    color: white;
+}
+.header {
+    font-size: 65px;
+    text-align: center;
+    font-family: Harrington;
+    font-weight: 900;
+    letter-spacing: 3px;
+    border-bottom-style: groove;
+}
+ul {
+    list-style-type: none;
+    padding-top: 10px;
+}
+li {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 10px;
+}
+.button {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-display: initial;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+}
+.button1 {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    height: 50px;
+    width: 130px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+.button1:hover {
+    background-color: darkgoldenrod;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+.button2 {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    height: 50px;
+    width: 130px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+.button2:hover {
+    background-color: darkgoldenrod;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+.button3 {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    height: 50px;
+    width: 130px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+.button3:hover {
+    background-color: darkgoldenrod;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+.button4 {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    height: 50px;
+    width: 130px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+.button4:hover {
+    background-color: darkgoldenrod;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+.button5 {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    height: 50px;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+.button5:hover {
+    background-color: darkgoldenrod;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+th {
+    font-family: 'Lucida Bright';
+    border: 5px groove orange;
+    background-color: white;
+    color: darkgoldenrod;
+    font-size: 25px;
+    right: 50px;
+    position: page;   
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+td {
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px;
+    text-align: left;
+    border: 4px solid darkgoldenrod;
+    padding: 15px 10px 15px 30px;
+    background-color: black;
+    font-size: 22px;
+}
+.right{
+    text-align: center;
+}
+p {
+    font-family: 'Lucida Bright';
+    font-size: 50px;
+    text-align: center;
+}
+.para{
+    font-size: 43px;
+}
+form.example button {
+    float: right;
+    width: 4%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    border: 3px solid darkgoldenrod;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 4%;
+    top: 18%;
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 3px solid darkgoldenrod;
+    border-radius: 10px;
+    float: right;
+    width: 22%;
+    background: #f1f1f1;
+    position: absolute;
+    right: 4%;
+    top: 18%;
+}
+form.example button:hover {
+    background-color: darkgoldenrod;
+}
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+
+

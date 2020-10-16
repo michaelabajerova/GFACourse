@@ -1,0 +1,51 @@
+﻿@using WebShop.Models.ViewModels
+@model IndexViewModel
+@{
+    var shopItems = Model.ShopItems;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>WebShop</title>
+
+    <link rel="stylesheet" href="~/Styles/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">Magic Store</header>
+    <ul>
+        <li class="button1"><a href="only-available" class="button">Only available</a></li>
+        <li class="button2"><a href="cheapest-first" class="button">Cheapest First</a></li>
+        <li class="button3"><a href="contains-magic" class="button">Contains Magic</a></li>
+        <li class="button4"><a href="average-stock" class="button">Average Stock</a></li>
+        <li class="button5"><a href="most-expensive" class="button">Most Expensive Available</a></li>
+    </ul>
+    <form class="example" action="search" method="post">
+        <input type="text" placeholder="Type to search..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity of stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in shopItems)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td class="right">@item.Price Kč</td>
+                    <td class="right">@item.Quantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
