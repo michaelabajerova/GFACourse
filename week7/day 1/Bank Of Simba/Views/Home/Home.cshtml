@@ -1,0 +1,61 @@
+﻿@using Bank_Of_Simba.Models.ViewModel
+@model BankViewModel
+@{
+    var BankAccounts = Model.NewBankAccounts;
+    int id = 0;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Wimoweh</title>
+    <link rel="stylesheet" href="~/Styles/style.css" type="text/css">
+</head>
+<body>
+    <header class="header">Bank Of Simba</header>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Animal Type</th>
+                <th>Is this animal Our Lord and Savior?</th>
+                <th>Is this animal animal-friendly??</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in BankAccounts)
+            {
+                id++;
+                <tr>
+                    <td>@id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Balance</td>
+                    <td>@item.AnimalType</td>
+                    @if (item.IsKing)
+                    {
+                        <td> It is. Lord help us all </td>
+                    }
+                    else
+                    {
+                        <td> Just a peasant</td>
+                    }
+                    @if (item.IsGood)
+                    {
+                        <td> Friend </td>
+                    }
+                    else
+                    {
+                        <td> Foe </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+    <form class="example" action="raise" method="post">
+        <input type="text" name="raiseMoney"/>
+        <button>Raise</button>
+    </form>
+</body>
+</html>
