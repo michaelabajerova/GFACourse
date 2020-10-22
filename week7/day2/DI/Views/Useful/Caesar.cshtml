@@ -1,0 +1,19 @@
+﻿@model string
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Caesar", "Useful", FormMethod.Post))
+        {
+            <input type="text" name="text" />
+            <input type="number" name="number" />
+            <input type="submit" />
+        }
+    </div>
+    <h1>
+        @Model
+    </h1>
+</body>
+</html>

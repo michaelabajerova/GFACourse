@@ -16,6 +16,6 @@ namespace Bank_Of_Simba.Models
                 new NewBankAccount("Simba", 2000.00, "lion", true, false),
                 new NewBankAccount("Marvin", 2000.00, "zebra", false, true)
         };
-        }
+        }       
     }
 }
