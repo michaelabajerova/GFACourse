@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 
 namespace DI.Services
 {
-    public class StudentService
+    public class StudentService : IStudentService
     {
         private readonly List<string> names;
 
         public StudentService()
         {
-            names = new List<string> { "Sanyi", "Lilla", "John" };
+            names = new List<string> { "Angela", "Pamela", "Sandra", "Rita", "Monica", "Erica", 
+                "Tina", "Sandra", "Mary", "Jessica" };
         }
 
         public List<string> FindAll()
@@ -22,6 +23,10 @@ namespace DI.Services
         public void Save(string student)
         {
             names.Add(student);
+        }
+        public int Count()
+        {
+            return names.Count();
         }
     }
 }
