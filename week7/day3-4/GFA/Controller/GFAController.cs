@@ -38,5 +38,11 @@ namespace DI.Controllers
             var model = new StudentViewModel(Service.FindAll());
             return View("add", model);
         }
+        [HttpGet("check")]
+        public IActionResult CheckStudent(string name)
+        {
+            var model = new StudentViewModel(Service.FindAll());
+            return View("Check", model);
+        }
     }
 }

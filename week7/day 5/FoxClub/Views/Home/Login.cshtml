@@ -1,0 +1,21 @@
+﻿@using FoxClub.Models
+@model Fox
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="~/Styles/style.css">
+</head>
+<body>
+    <h1>Welcome to programmer Fox Club</h1>
+    <p>Please provide a name, so you can associate it to your pet!</p>
+    @using (@Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(fox => fox.Name)
+
+        <button>GO!</button>
+    }
+</body>
+</html>

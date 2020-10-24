@@ -1,0 +1,27 @@
+﻿@using FoxClub.Models;
+@model Fox;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fox Club Homepage</title>
+</head>
+<body>
+    <h1>@Model.Name</h1>
+    <ul>
+        <li><a href="/home/?name=@Model.Name">Information</a></li>
+        <li><a href="/nutritionstore/?name=@Model.Name">Nutrition Store</a></li>
+        <li><a href="/trickcenter/?name=@Model.Name">Trick Center</a></li>
+    </ul>
+    <form action="/nutritionStore" method="post">
+        <input type="text" name="name" value="@Model.Name" hidden />
+        <label for="food">Food</label>
+        <select id="food" name="food"></select>
+        <label for="drink">Drink</label>
+        <input type="text" name="name" value="" />
+        <button type="submit">Change</button>
+    </form>
+</body>
+</html>
