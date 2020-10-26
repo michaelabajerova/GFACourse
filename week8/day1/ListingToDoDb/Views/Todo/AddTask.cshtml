@@ -1,0 +1,23 @@
+﻿
+@using ListingToDoDb.Models.ViewModels
+
+@model IndexViewToDo
+
+<html>
+<head>
+    <title>Add new item</title>
+</head>
+<body>
+    <h1>Add new todo</h1>
+    @using (Html.BeginForm("AddNewItem", "Todo", FormMethod.Post))
+    {
+        @Html.Label("Todo title:")@Html.TextBoxFor(t => t.Todo.Title)<br />
+        @Html.Label("Urgent?")@Html.CheckBoxFor(t => t.Todo.IsUrgent)<br />
+        @Html.Label("Done?")@Html.CheckBoxFor(t => t.Todo.IsDone)<br />
+        <input type="submit" value="Submit" />
+    }
+
+    <a href="/">Back</a>
+
+</body>
+</html>
