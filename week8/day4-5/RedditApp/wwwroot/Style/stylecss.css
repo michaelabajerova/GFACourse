@@ -1,0 +1,41 @@
+﻿body {
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+h1{
+    font-family: NSimSun;
+    font-size: 43px;
+    text-align: center;
+    border-bottom-style: ridge;
+    border-top-style: ridge;
+    border-width: 5px;
+}
+.nav{
+    font-family: NSimSun;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    border-bottom-style:ridge;
+    border-top-style: ridge;
+    padding: 7px;
+    letter-spacing: 1px;
+    border-color: black;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.nav:hover{
+    background-color: slategrey;
+    color: white;
+}
+.pos{
+    text-align: center;
+}
+table{
+    position: center;
+    padding: 20px;
+    margin-left: 350px;
+    border: groove;
+    margin-top: 20px;
+}
+

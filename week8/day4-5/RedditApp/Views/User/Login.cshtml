@@ -6,14 +6,13 @@
     <h1>Login</h1>
     <div>
         <form action="/login" method="post">
-            Username:<br>
-            <input type="text" name="Username" value="" required>
-            <br>
-            Password<br>
-            <input type="text" name="Password" value="" required>
-            <br><br>
-            <input type="submit" value="Login">
-        </form>
+            <label for="name">Username:</label><br>
+            <input type="text" name="name" value="" required /><br />
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" value="" required /><br />
+            <button asp-controller="User" asp-action="Login">Login</button>
+        </form><br />
     </div>
+    <a href="/">Back</a>
 </body>
 </html>

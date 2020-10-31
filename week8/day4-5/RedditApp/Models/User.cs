@@ -17,6 +17,7 @@ namespace RedditApp.Models
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
+        public bool Logged { get; set; }
 
 
         public User(string username, string email, string password)

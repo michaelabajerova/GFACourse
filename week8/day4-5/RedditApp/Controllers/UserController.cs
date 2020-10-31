@@ -12,16 +12,22 @@ namespace RedditApp.Controllers
     public class UserController : Controller
     {
         private IUser userRepository;
-        private IReddit redditRepository;
-        public UserController(IUser userRepository, IReddit redditRepository)
+
+        public UserController(IUser userRepository)
         {
             this.userRepository = userRepository;
-            this.redditRepository = redditRepository;
         }
-        [HttpGet("/login")]
+        [HttpGet("login")]
         public IActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost("login")]
+        public IActionResult Login(string name, string password)
+        {
+            userRepository.Login(name, password);
+            return RedirectToAction("Homepage", "Reddit");
         }
         [HttpGet("register")]
         public IActionResult Register()
@@ -33,6 +39,12 @@ namespace RedditApp.Controllers
         public IActionResult Register(string name, string password, string email)
         {
             userRepository.Register(name, password, email);
+            return RedirectToAction("Login");
+        }
+        [HttpGet("logout")]
+        public IActionResult Logout()
+        {
+            userRepository.Logout();
             return RedirectToAction("Homepage");
         }
     }
