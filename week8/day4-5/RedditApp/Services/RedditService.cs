@@ -43,7 +43,11 @@ namespace RedditApp.Services
         }
         public void DeletePost(int id)
         {
-            redditContext.Remove(GetPost(id));
+            var deleteItem = (from deleteOne in redditContext.Posts
+                              where deleteOne.Id == id
+                              select deleteOne).FirstOrDefault();
+
+            redditContext.Remove(deleteItem);
             redditContext.SaveChanges();
         }
     }

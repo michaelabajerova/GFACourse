@@ -1,0 +1,15 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h2>Add new Assignee:</h2>
+    <form action="/assignee/add" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required />
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" value="" required />
+        <button asp-controller="Assignee" asp-action="AddAssignee">Submit</button>
+    </form>
+</body>
+</html>>

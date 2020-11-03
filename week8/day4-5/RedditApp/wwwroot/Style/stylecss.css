@@ -1,7 +1,4 @@
 ﻿body {
-    text-align: right;
-    margin-right: 20px;
-    margin-top: 20px;
 }
 h1{
     font-family: NSimSun;
@@ -12,6 +9,7 @@ h1{
     border-width: 5px;
 }
 .nav{
+    display:flex;
     font-family: NSimSun;
     text-decoration: none;
     color: black;
@@ -36,6 +34,17 @@ table{
     padding: 20px;
     margin-left: 350px;
     border: groove;
+    border-collapse: collapse;
     margin-top: 20px;
+}
+.login{
+    font-family: NSimSun;
+    text-align: center;
+}
+.inter{
+    text-align: center;
+}
+tr{
+    padding: 30px;
 }
 

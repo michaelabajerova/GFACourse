@@ -1,4 +1,6 @@
-﻿using ListingToDoDb.Models.ViewModels;
+﻿using ListingToDoDb.Database;
+using ListingToDoDb.Models.Entities;
+using ListingToDoDb.Models.ViewModels;
 using ListingToDoDb.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +9,7 @@ namespace ListingToDoDb.Controllers
     [Route("/todo")]
     public class ToDoController : Controller
     {
+        public IAssignee serviceAss;
         public IToDoService service;
 
         public ToDoController(IToDoService service)
@@ -39,6 +42,29 @@ namespace ListingToDoDb.Controllers
         {
             service.AddTask(todo);
             return RedirectToAction("List");
+        }
+        [HttpGet("/listAssignee")]
+        public IActionResult ListAssignees()
+        {
+            return View("listAssignee");
+        }
+        [HttpGet("/add")]
+        public IActionResult RenderAdd()
+        {
+            return View("AddAssignee");
+        }
+
+        [HttpPost("/add")]
+        public IActionResult Add(Assignee assignee)
+        {
+            serviceAss.AddAssignee(assignee);
+            return RedirectToAction("listAssignee");
+        }
+        [HttpPost("/delete")]
+        public IActionResult Delete(int id)
+        {
+            serviceAss.DeleteAssignee(id);
+            return RedirectToAction("listAssignee");
         }
     }
 }

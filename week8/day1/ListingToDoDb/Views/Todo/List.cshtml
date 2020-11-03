@@ -4,16 +4,22 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="~/Styles/style.css">
     <title>Todos for today</title>
 </head>
 <body>
-    <h1>Todos for today</h1>
-    <a href="addTask">Add new Todo</a> <br />
+    <header>Todos for today</header>
+
+    <form class="example" action="search" method="post">
+        <input type="text" placeholder="Type to search..." name="search">
+        <button type="submit">Search</button>
+    </form>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>TITLE</th>
+                <th>DESCRIPTION</th>
                 <th>IS URGENT</th>
                 <th>IS DONE</th>
             </tr>
@@ -24,11 +30,18 @@
                 <tr>
                     <td>@task.Id</td>
                     <td>@task.Title</td>
+                    <td>@task.Description</td>
                     <td>@task.IsUrgent</td>
                     <td>@task.IsDone</td>
+                    <td>@Html.ActionLink("Edit", "editTodo", "Todo", new { id = task.Id })</td>
+                    <td>@Html.ActionLink("Remove", "removeTodo", "Todo", new { id = task.Id })</td>
                 </tr>
             }
         </tbody>
     </table>
+    <ul>
+        <li class="button1"><a href="addTask" class="button">Add Task</li>
+        <li class="button2"><a href="listAssignee" class="button">List of Assignees</a>
+</ul>
 </body>
 </html>

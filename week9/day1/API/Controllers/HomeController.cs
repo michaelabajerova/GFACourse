@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using API.Models;
 using API.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +14,7 @@ namespace API.Controllers
         {
             this.service = service;
         }
+
         [HttpGet("/")]
         public IActionResult Index()
         {
@@ -38,6 +38,7 @@ namespace API.Controllers
         [HttpGet("/greeter")]
         public IActionResult Greeter(string name, string title)
         {
+            service.AddLog("greeter", $"Name: {name}, Title: {title}");
             if (name == null && title == null)
             {
                 return Json(new { error = "Please provide a name and a title!", status = 400 });
@@ -50,13 +51,14 @@ namespace API.Controllers
             {
                 return Json(new { error = "Please provide a title!", status = 400 });
             }
-            service.AddLog(name, title);
+
             return Json(new { welcome_message = "Oh, hi there " + name + ", my dear " + title + "!" });
         }
 
         [HttpGet("/appenda/{appendable}")]
         public IActionResult AppendA(string appendable)
         {
+            service.AddLog("appena", $"{appendable}");
             return Json(new { appended = $"{appendable}a" });
         }
 
@@ -69,6 +71,7 @@ namespace API.Controllers
         [HttpPost("/dountil/{operation}")]
         public IActionResult DoUntil(string operation, [FromBody] Number number)
         {
+            service.AddLog("appena", $"Operation: {operation}, Until: {number}");
             if (operation.Equals("sum"))
             {
                 int sum = 0;
@@ -94,6 +97,7 @@ namespace API.Controllers
         [HttpPost("/arrays")]
         public IActionResult Arrays([FromBody] Arrays input)
         {
+            service.AddLog("arrays", $"Operation: {input.What}, Array: {input.numbers}");
             if (input.What.Equals("sum"))
             {
                 int number = 0;
@@ -116,6 +120,31 @@ namespace API.Controllers
             {
                 return Json(new { error = "Please provide what to do with the numbers!" });
             }
+        }
+
+        [HttpGet("/log")]
+        public IActionResult Log()
+        {
+            return Json(service.ReturnAllLogs());
+        }
+        [HttpPost("/sith")]
+        public ActionResult SithReverser([FromBody] Sith sith)
+        {
+            if (sith.Text == null)
+            {
+                return StatusCode(400, new { error = "Feed me some text you have to, padawan young you are. Hmmm." });
+            }
+            return Json(new { sith_text = service.SithReverser(sith.Text) });
+        }
+        [HttpPost("/translate")]
+        public IActionResult Translation([FromBody]Gibberish gibberish)
+        {
+            if (gibberish is null)
+            {
+                return BadRequest(new { error = "I can't translate that!" });
+            }
+            service.AddLog("Giberrish", gibberish.Lang);
+            return Json(service.Translate(gibberish.Text));
         }
     }
 }

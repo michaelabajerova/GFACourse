@@ -11,10 +11,10 @@ namespace ListingToDoDb.Services
         public List<ToDo> FirstTodo()
         {
             var firstTodo = new List<ToDo> {
-            new ToDo(1, "Start the day", false, false),
-            new ToDo(2, "Finish H2 workshop 1", false, false),
-            new ToDo(3, "Finish JPA workshop 2", false, false),
-            new ToDo(4, "Create a CRUD project", false, false)
+            new ToDo(1, "Start the day","blah", false, false),
+            new ToDo(2, "Finish H2 workshop 1","blah", false, false),
+            new ToDo(3, "Finish JPA workshop 2","blah", false, false),
+            new ToDo(4, "Create a CRUD project","blah", false, false)
             };
             return firstTodo;
         }

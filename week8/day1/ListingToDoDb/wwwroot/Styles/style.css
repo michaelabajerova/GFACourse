@@ -1,0 +1,38 @@
+﻿body {
+    background-color: #C060A1;
+    color: #F1D4D4;
+}
+header{
+    background-color: black;
+    font-size: 50px;
+    padding: 10px;
+    text-align:center;
+}
+tr {
+    background-color: 6a097d;
+    color: #F1D4D4;
+}
+th{
+    padding: 15px;
+}
+
+thead{
+    padding: 60px;
+}
+table{
+    margin-left: 320px;
+    margin-top: 10px;
+}
+.button1 {
+    background-color: 6a097d;
+    color: white;
+    border: none;
+    height: 20px;
+    width: 130px;
+    border-radius: 8px;
+    font-size: 13px;
+    list-style-type: none;
+}
+li {
+    color: #F1D4D4;
+}
