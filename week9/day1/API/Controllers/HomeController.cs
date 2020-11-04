@@ -132,14 +132,14 @@ namespace API.Controllers
         {
             if (sith.Text == null)
             {
-                return StatusCode(400, new { error = "Feed me some text you have to, padawan young you are. Hmmm." });
+                return Json(new { error = "Feed me some text you have to, padawan young you are. Hmmm.", status = 400 });
             }
             return Json(new { sith_text = service.SithReverser(sith.Text) });
         }
         [HttpPost("/translate")]
         public IActionResult Translation([FromBody]Gibberish gibberish)
         {
-            if (gibberish is null)
+            if (gibberish == null)
             {
                 return BadRequest(new { error = "I can't translate that!" });
             }
