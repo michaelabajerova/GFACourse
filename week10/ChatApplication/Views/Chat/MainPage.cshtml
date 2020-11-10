@@ -1,0 +1,70 @@
+﻿@model ChatApplication.Models.GetChat
+
+<html>
+<head>
+    <title>New Generation of WebChat</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Styles/style.css" />
+    <script type="text/JavaScript">
+        function RefreshPage(time) {
+            setTimeout("location.reload(true);", time);
+        }
+    </script>
+</head>
+<body onload="RefreshPage(6000)">
+    <header class="main-header">
+        <div class="main-header__logo">
+            <h1>FoxChat</h1>
+        </div>
+    </header>
+    <section class="data-view">
+        <table class="table">
+            <tr>
+                <td>
+                    <h1>Welcome to FoxChat</h1>
+                </td>
+                <td>
+                    @Html.ActionLink("Refresh", "MainPage")
+                </td>
+                <td>
+                    @Html.ActionLink("LogOut", "logout")
+                </td>
+            </tr>
+            @*@foreach (var item in Model.Messages)
+            {
+                <tr>
+                    <td>
+                        @item.content
+                        <br />
+                    </td>
+                    <td>
+                        @item.created.ToLocalTime().ToString("HH:mm dd.MM.")
+                    </td>
+                    <td>
+                        by @item.author.username
+                    </td>
+                    <td>
+                        <img src="@item.author.avatarUrl" width="45" height="45" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                    </td>
+
+                </tr>
+            }*@
+            <tr>
+                <td>
+                    Add new post:
+                    @using (Html.BeginForm("MainPage", "chat", FormMethod.Post))
+                    {
+                        <input type="text" name="content" required>
+                        <input type="submit" value="Go" action="/MainPage"><br /><br />
+                    }
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

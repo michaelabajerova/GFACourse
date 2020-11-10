@@ -11,15 +11,7 @@ namespace ListingToDoDb.Database
         public DbSet<Assignee> Assignee { get; set; }
 
         public ApplicationContext(DbContextOptions options) : base(options)
-        {
-        }
-
-        public void ModelBuilder(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<ToDo>()
-                    .HasOne<Assignee>(p => p.Assignees)
-                    .WithOne(p => p.Id)
-                    .HasForeignKey<ToDo>();           
+        {          
         }
     }
 }

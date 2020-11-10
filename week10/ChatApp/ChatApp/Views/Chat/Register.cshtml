@@ -1,0 +1,17 @@
+﻿<table>
+    <tr>
+        <td>
+            Register :
+            @using (Html.BeginForm("register", "Chat", FormMethod.Post))
+            {
+                <label for="name">New Username: </label>
+                <input type="text" name="login" required /><br><br>
+                <label for="password">Password: </label>
+                <input type="password" name="password" required><br /><br />
+                <label for="password">Confirm Password: </label>
+                <input type="password" name="password" required><br /><br />
+                <input type="submit" value="Create new account" action="/register"><br /><br />
+            }
+        </td>
+    </tr>
+</table>
